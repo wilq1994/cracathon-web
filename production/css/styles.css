@@ -1,0 +1,134 @@
+.chair-block{
+    width: 20px;
+    height: 20px;
+    background: red;
+    border: blue;
+    display: block;
+}
+
+.chair-block:hover{
+    background: blue;
+    cursor: pointer;
+}
+
+.main-container{
+    display: flex;
+}
+
+.left-side{
+    background: url(../images/chair.png) no-repeat;
+    width: 300px;
+    height: 300px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 auto;
+    -webkit-background-size: 300px 300px;
+    background-size: 300px 300px;
+}
+
+.right-side{
+    overflow: hidden;
+    flex: 1 1 auto;
+}
+
+.right-side .data-container,
+.right-side .weight-container{
+    display: block;
+    height: 50%;
+    padding: 20px;
+}
+
+.right-side .data-container .chart-bar-red{
+    width: 100%;
+    height: 30px;
+    margin-top: 70px;
+    border-radius: 5px;
+    position: relative;
+
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#e55151, #ca2222); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#e55151, #ca2222); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#e55151, #ca2222); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#e55151, #ca2222); /* Standard syntax */
+}
+
+.right-side .data-container .chart-bar-red .chart-bar-green{
+    width: 30%;
+    height: 30px;
+    background: green;
+    border-radius: 5px;
+    position: absolute;
+
+    background: #32bc69; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#52e28c, #32bc69); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#52e28c, #32bc69); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#52e28c, #32bc69); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#52e28c, #32bc69); /* Standard syntax */
+}
+
+
+.chair-holder .chair-sensor{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: red;
+    display: block;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.7;
+}
+
+.sensor_top{
+    top: 120px;
+    left: 125px;
+}
+
+.sensor_left{
+    top: 180px;
+    left: 50px;
+}
+
+.sensor_right{
+    top: 180px;
+    right: 50px;
+}
+
+.sensor_bottom{
+    top: 240px;
+    left: 125px;
+}
+
+.data-container{
+    position: relative;
+}
+
+.data-container .left-data-holder{
+    position: absolute;
+    left: 0;
+    border: 1px solid red;
+}
+
+.data-container .right-data-holder{
+    position: absolute;
+    right: 0;
+    border: 1px solid red;
+}
+
+.data-container .title,
+.data-container .percents,
+.data-container .hours{
+    display: block;
+}
+
+.data-container .title{
+    font-weight: bold;
+}
+
+.data-container .bad{
+    color: red;
+}
+
+.data-container .good{
+    color: green;
+}
