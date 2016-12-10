@@ -216,3 +216,20 @@
     top: 50%;
     left: 50%;
 }
+
+.tile_stats_count {
+    background: #fff;
+    text-align: center;
+}
+
+.tile_stats_count img {
+    margin: 20px 0;
+}
+
+.tile_count .tile_stats_count .count {
+    margin-bottom: 20px;
+}
+
+.tile_count .tile_stats_count:before {
+    display: none;
+}
