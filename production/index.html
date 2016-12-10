@@ -321,16 +321,18 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="office-layout">
+                        <div class="office-layout__container">
 
-                        <img src="images/office.jpg" />
+                            <img src="images/office.jpg" />
 
-                        <a class="chair-block" id="chair1" href="#modal"></a>
-                        <a class="chair-block" id="chair2" href="#modal"></a>
-                        <a class="chair-block" id="chair3" href="#modal"></a>
-                        <a class="chair-block" id="chair4" href="#modal"></a>
-                        <a class="chair-block" id="chair5" href="#modal"></a>
-                        <a class="chair-block" id="chair6" href="#modal"></a>
-                        <a class="chair-block" id="chair7" href="#modal"></a>
+                            <a class="chair-block" id="chair1" href="#modal"></a>
+                            <a class="chair-block" id="chair2" href="#modal"></a>
+                            <a class="chair-block" id="chair3" href="#modal"></a>
+                            <a class="chair-block" id="chair4" href="#modal"></a>
+                            <a class="chair-block" id="chair5" href="#modal"></a>
+                            <a class="chair-block" id="chair6" href="#modal"></a>
+                            <a class="chair-block" id="chair7" href="#modal"></a>
+                        </div>
                     </div>
                 </div>
 
@@ -1376,6 +1378,23 @@
         $('.tile_stats_count .count').eq(0).html(results[0].percent+'%<i class="green"><i class="fa fa-sort-asc"></i>'+results[0].tendency+'% </i>');
         $('.tile_stats_count .count').eq(1).html(results[1].percent+'%<i class="red"><i class="fa fa-sort-desc"></i>'+results[1].tendency+'% </i>');
         $('.tile_stats_count .count').eq(2).html(results[2].percent+'%<i class="green"><i class="fa fa-sort-asc"></i>'+results[2].tendency+'% </i>');
+    })
+</script>
+
+<script>
+    $.getJSON('http://localhost:8080/positiondata?user=1', function(results){
+        $('.remodal .left-data-holder .percents').text(results['daily'].good+'%');
+        $('.remodal .left-data-holder .hours').text((results['daily'].good/100*8)+'h');
+        $('.remodal .right-data-holder .percents').text(results['daily'].bad+'%');
+        $('.remodal .right-data-holder .hours').text((results['daily'].bad/100*8)+'h');
+        $('.chart-bar-green').css('width', results['daily'].good+'%');
+    })
+    $.getJSON('http://localhost:8080/bottomPressure?user=1', function(results){
+        console.log(results);
+        $('.sensor_top').css('opacity', results['changeTendencyFront']);
+        $('.sensor_left').css('opacity', results['changeTendencyLeft']);
+        $('.sensor_right').css('opacity', results['changeTendencyRight']);
+        $('.sensor_bottom').css('opacity', results['changeTendencyBack']);
     })
 </script>
 </body>

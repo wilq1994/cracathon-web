@@ -149,11 +149,15 @@
     padding: 50px 50px;
     position: relative;
 }
+.office-layout__container {
+    width: 858px;
+    margin: 0 auto;
+    position: relative;
+}
 .office-layout img{
     max-width: 100%;
     height: 500px;
     display: block;
-    margin: 0 auto;
 }
 
 .office-layout .chair-block{
@@ -173,38 +177,38 @@
 }
 
 #chair1{
-    top: 70px;
-    left: 370px;
+    top: calc(70px - 50px);
+    left: calc(370px - 196px);
 }
 
 #chair2{
-    top: 190px;
-    left: 360px;
+    top: calc(190px - 50px);
+    left: calc(360px - 196px);
 }
 
 #chair3{
-    top: 170px;
-    left: 300px;
+    top: calc(170px - 50px);
+    left: calc(300px - 196px);
 }
 
 #chair4{
-    top: 265px;
-    left: 255px;
+    top: calc(265px - 50px);
+    left: calc(255px - 196px);
 }
 
 #chair5{
-    top: 360px;
-    left: 265px;
+    top: calc(360px - 50px);
+    left: calc(265px - 196px);
 }
 
 #chair6{
-    top: 470px;
-    left: 265px;
+    top: calc(470px - 50px);
+    left: calc(265px - 196px);
 }
 
 #chair7{
-    top: 415px;
-    left: 355px;
+    top: calc(415px - 50px);
+    left: calc(355px - 196px);
 }
 
 
